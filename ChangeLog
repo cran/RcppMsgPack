@@ -1,0 +1,49 @@
+2017-06-12  Dirk Eddelbuettel  <edd@debian.org>
+
+	* DESCRIPTION(Version): Version 0.1.1
+
+	* inst/include/msgpack: Updated to upstream release 1.4.2
+
+	* inst/AUTHORS: Added
+
+	* DESCRIPTION((OS_type): Set to 'unix'
+
+	* README.md: Use alternates for img.shields.io GPL-2+ badges
+	* rcppmsgpack.Rproj: Added for RStudio
+
+2016-04-24  Dirk Eddelbuettel  <edd@debian.org>
+
+	* DESCRIPTION: (UnreleVersion 0.1.0
+
+	* DESCRIPTION: One more edit about status and copyright,
+	* README.ndL Ditto
+
+2016-02-20  Dirk Eddelbuettel  <edd@debian.org>
+
+	* DESCRIPTION: Add that the package status is still in transition.
+	* README.md: Ditto
+
+2016-02-19  Dirk Eddelbuettel  <edd@debian.org>
+
+	* src/example2.cpp: Added second example
+
+2016-02-18  Dirk Eddelbuettel  <edd@debian.org>
+
+	* src/example1.cpp: Added manual page entry
+
+2016-02-17  Dirk Eddelbuettel  <edd@debian.org>
+
+	* src/example1.cpp: Added simple example
+
+2016-02-15  Dirk Eddelbuettel  <edd@debian.org>
+
+	* inst/include: Initial version based on msgpack-c version 1.4.0
+
+	* DESCRIPTION: Add Copyright: reference to inst/COPYRIGHTS
+
+	* inst/COPYRIGHTS: Detailing various copyrights
+
+	* tests/simpleTests.R: Minimal test added
+
+	* inst/NEWS.Rd: Added
+
