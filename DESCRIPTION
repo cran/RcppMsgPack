@@ -1,9 +1,9 @@
 Package: RcppMsgPack
 Type: Package
 Title: 'MsgPack' C++ Header Files
-Version: 0.1.1
-Date: 2017-06-12
-Author: Dirk Eddelbuettel; the authors and contributors of MsgPack
+Version: 0.2.0
+Date: 2017-09-07
+Author: Travers Ching and Dirk Eddelbuettel; the authors and contributors of MsgPack
 Maintainer: Dirk Eddelbuettel <edd@debian.org>
 Description: 'MessagePack' is an efficient binary serialization format.
  It lets you exchange data among multiple languages like 'JSON'. But it is
@@ -18,11 +18,12 @@ Description: 'MessagePack' is an efficient binary serialization format.
 Copyright: file inst/COPYRIGHTS
 License: GPL (>= 2)
 Imports: Rcpp
-LinkingTo: Rcpp
+LinkingTo: Rcpp, BH
 BugReports: https://github.com/eddelbuettel/rcppmsgpack/issues
-OS_type: unix
-RoxygenNote: 5.0.1
+RoxygenNote: 6.0.1
+Suggests: knitr, rmarkdown, microbenchmark
+VignetteBuilder: knitr
 NeedsCompilation: yes
-Packaged: 2017-06-12 10:49:05.725225 UTC; edd
+Packaged: 2017-09-07 11:23:28.646513 UTC; edd
 Repository: CRAN
-Date/Publication: 2017-06-12 11:47:26 UTC
+Date/Publication: 2017-09-07 18:18:16 UTC

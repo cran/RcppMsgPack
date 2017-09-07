@@ -1,3 +1,5 @@
-exportPattern("^[[:alpha:]]+")
-useDynLib(RcppMsgPack)
-importFrom(Rcpp, evalCpp)
+useDynLib(RcppMsgPack, .registration=TRUE)
+importFrom("Rcpp", "evalCpp")
+export("msgpack_format", "msgpack_map", "msgpack_pack", "msgpack_simplify", "msgpack_unpack",
+       "msgpackFormat", "msgpackMap", "msgpackPack", "msgpackSimplify", "msgpackUnpack",
+       "arrayEx", "enumEx")
