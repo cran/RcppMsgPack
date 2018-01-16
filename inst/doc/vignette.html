@@ -80,10 +80,7 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 <div id="installation" class="section level3">
 <h3>Installation:</h3>
 <ol style="list-style-type: decimal">
-<li>On Windows, install Rtools (<a href="https://cran.r-project.org/bin/windows/Rtools/" class="uri">https://cran.r-project.org/bin/windows/Rtools/</a>)</li>
-<li>In R, install devtools: <code>install.packages(&quot;devtools&quot;)</code></li>
-<li><code>library(devtools)</code></li>
-<li><code>install_github(&quot;traversc/msgpack2R&quot;)</code></li>
+<li><code>Install.packages(&quot;RcppMsgPack&quot;)</code></li>
 </ol>
 </div>
 <div id="example" class="section level3">
@@ -92,19 +89,19 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">library</span>(RcppMsgPack)
 <span class="kw">library</span>(microbenchmark)
 
-x &lt;-<span class="st"> </span><span class="kw">as.list</span>(<span class="dv">1</span><span class="op">:</span><span class="fl">1e6</span>)
+x &lt;-<span class="st"> </span><span class="dv">1</span><span class="op">:</span><span class="fl">1e6</span>
 <span class="kw">microbenchmark</span>(xpk &lt;-<span class="st"> </span><span class="kw">msgpack_pack</span>(x), <span class="dt">times=</span><span class="dv">3</span>)</code></pre></div>
 <pre><code>## Unit: milliseconds
 ##                    expr      min       lq     mean   median       uq
-##  xpk &lt;- msgpack_pack(x) 96.96307 100.0263 103.2186 103.0895 106.3463
+##  xpk &lt;- msgpack_pack(x) 17.83441 27.49096 31.10495 37.14751 37.74022
 ##       max neval
-##  109.6031     3</code></pre>
+##  38.33293     3</code></pre>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">microbenchmark</span>(xu &lt;-<span class="st"> </span><span class="kw">msgpack_unpack</span>(xpk), <span class="dt">times=</span><span class="dv">3</span>)</code></pre></div>
 <pre><code>## Unit: milliseconds
-##                       expr      min       lq     mean   median       uq
-##  xu &lt;- msgpack_unpack(xpk) 789.1947 808.5951 844.7374 827.9954 872.5087
+##                       expr      min      lq   mean   median       uq
+##  xu &lt;- msgpack_unpack(xpk) 136.3251 176.347 192.69 216.3689 220.8725
 ##       max neval
-##  917.0219     3</code></pre>
+##  225.3761     3</code></pre>
 </div>
 </div>
 

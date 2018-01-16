@@ -5,28 +5,6 @@
 
 using namespace Rcpp;
 
-// c_pack
-RawVector c_pack(SEXP root_obj);
-RcppExport SEXP _RcppMsgPack_c_pack(SEXP root_objSEXP) {
-BEGIN_RCPP
-    Rcpp::RObject rcpp_result_gen;
-    Rcpp::RNGScope rcpp_rngScope_gen;
-    Rcpp::traits::input_parameter< SEXP >::type root_obj(root_objSEXP);
-    rcpp_result_gen = Rcpp::wrap(c_pack(root_obj));
-    return rcpp_result_gen;
-END_RCPP
-}
-// c_unpack
-SEXP c_unpack(std::vector<unsigned char> char_message);
-RcppExport SEXP _RcppMsgPack_c_unpack(SEXP char_messageSEXP) {
-BEGIN_RCPP
-    Rcpp::RObject rcpp_result_gen;
-    Rcpp::RNGScope rcpp_rngScope_gen;
-    Rcpp::traits::input_parameter< std::vector<unsigned char> >::type char_message(char_messageSEXP);
-    rcpp_result_gen = Rcpp::wrap(c_unpack(char_message));
-    return rcpp_result_gen;
-END_RCPP
-}
 // arrayEx
 bool arrayEx();
 RcppExport SEXP _RcppMsgPack_arrayEx() {
@@ -47,12 +25,60 @@ BEGIN_RCPP
     return rcpp_result_gen;
 END_RCPP
 }
+// c_pack
+RawVector c_pack(SEXP root_obj);
+RcppExport SEXP _RcppMsgPack_c_pack(SEXP root_objSEXP) {
+BEGIN_RCPP
+    Rcpp::RObject rcpp_result_gen;
+    Rcpp::RNGScope rcpp_rngScope_gen;
+    Rcpp::traits::input_parameter< SEXP >::type root_obj(root_objSEXP);
+    rcpp_result_gen = Rcpp::wrap(c_pack(root_obj));
+    return rcpp_result_gen;
+END_RCPP
+}
+// c_unpack
+SEXP c_unpack(std::vector<unsigned char> char_message, bool simplify);
+RcppExport SEXP _RcppMsgPack_c_unpack(SEXP char_messageSEXP, SEXP simplifySEXP) {
+BEGIN_RCPP
+    Rcpp::RObject rcpp_result_gen;
+    Rcpp::RNGScope rcpp_rngScope_gen;
+    Rcpp::traits::input_parameter< std::vector<unsigned char> >::type char_message(char_messageSEXP);
+    Rcpp::traits::input_parameter< bool >::type simplify(simplifySEXP);
+    rcpp_result_gen = Rcpp::wrap(c_unpack(char_message, simplify));
+    return rcpp_result_gen;
+END_RCPP
+}
+// c_timestamp_encode
+RawVector c_timestamp_encode(double seconds, uint32_t nanoseconds);
+RcppExport SEXP _RcppMsgPack_c_timestamp_encode(SEXP secondsSEXP, SEXP nanosecondsSEXP) {
+BEGIN_RCPP
+    Rcpp::RObject rcpp_result_gen;
+    Rcpp::RNGScope rcpp_rngScope_gen;
+    Rcpp::traits::input_parameter< double >::type seconds(secondsSEXP);
+    Rcpp::traits::input_parameter< uint32_t >::type nanoseconds(nanosecondsSEXP);
+    rcpp_result_gen = Rcpp::wrap(c_timestamp_encode(seconds, nanoseconds));
+    return rcpp_result_gen;
+END_RCPP
+}
+// c_timestamp_decode
+List c_timestamp_decode(std::vector<unsigned char> v);
+RcppExport SEXP _RcppMsgPack_c_timestamp_decode(SEXP vSEXP) {
+BEGIN_RCPP
+    Rcpp::RObject rcpp_result_gen;
+    Rcpp::RNGScope rcpp_rngScope_gen;
+    Rcpp::traits::input_parameter< std::vector<unsigned char> >::type v(vSEXP);
+    rcpp_result_gen = Rcpp::wrap(c_timestamp_decode(v));
+    return rcpp_result_gen;
+END_RCPP
+}
 
 static const R_CallMethodDef CallEntries[] = {
-    {"_RcppMsgPack_c_pack", (DL_FUNC) &_RcppMsgPack_c_pack, 1},
-    {"_RcppMsgPack_c_unpack", (DL_FUNC) &_RcppMsgPack_c_unpack, 1},
     {"_RcppMsgPack_arrayEx", (DL_FUNC) &_RcppMsgPack_arrayEx, 0},
     {"_RcppMsgPack_enumEx", (DL_FUNC) &_RcppMsgPack_enumEx, 0},
+    {"_RcppMsgPack_c_pack", (DL_FUNC) &_RcppMsgPack_c_pack, 1},
+    {"_RcppMsgPack_c_unpack", (DL_FUNC) &_RcppMsgPack_c_unpack, 2},
+    {"_RcppMsgPack_c_timestamp_encode", (DL_FUNC) &_RcppMsgPack_c_timestamp_encode, 2},
+    {"_RcppMsgPack_c_timestamp_decode", (DL_FUNC) &_RcppMsgPack_c_timestamp_decode, 1},
     {NULL, NULL, 0}
 };
 
