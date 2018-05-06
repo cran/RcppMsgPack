@@ -93,15 +93,15 @@ x &lt;-<span class="st"> </span><span class="dv">1</span><span class="op">:</spa
 <span class="kw">microbenchmark</span>(xpk &lt;-<span class="st"> </span><span class="kw">msgpack_pack</span>(x), <span class="dt">times=</span><span class="dv">3</span>)</code></pre></div>
 <pre><code>## Unit: milliseconds
 ##                    expr      min       lq     mean   median       uq
-##  xpk &lt;- msgpack_pack(x) 17.83441 27.49096 31.10495 37.14751 37.74022
+##  xpk &lt;- msgpack_pack(x) 19.70474 27.11776 32.06556 34.53078 38.24597
 ##       max neval
-##  38.33293     3</code></pre>
+##  41.96117     3</code></pre>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">microbenchmark</span>(xu &lt;-<span class="st"> </span><span class="kw">msgpack_unpack</span>(xpk), <span class="dt">times=</span><span class="dv">3</span>)</code></pre></div>
 <pre><code>## Unit: milliseconds
-##                       expr      min      lq   mean   median       uq
-##  xu &lt;- msgpack_unpack(xpk) 136.3251 176.347 192.69 216.3689 220.8725
+##                       expr      min       lq     mean   median       uq
+##  xu &lt;- msgpack_unpack(xpk) 138.0003 174.9089 198.0832 211.8176 228.1247
 ##       max neval
-##  225.3761     3</code></pre>
+##  244.4319     3</code></pre>
 </div>
 </div>
 
