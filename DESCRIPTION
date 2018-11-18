@@ -1,8 +1,8 @@
 Package: RcppMsgPack
 Type: Package
 Title: 'MsgPack' C++ Header Files and Interface Functions for R
-Version: 0.2.2
-Date: 2018-05-06
+Version: 0.2.3
+Date: 2018-11-18
 Author: Travers Ching and Dirk Eddelbuettel; the authors and contributors of MsgPack
 Maintainer: Dirk Eddelbuettel <edd@debian.org>
 Description: 'MsgPack' header files are provided for use by R packages, along 
@@ -26,6 +26,6 @@ RoxygenNote: 6.0.1
 Suggests: knitr, rmarkdown, microbenchmark
 VignetteBuilder: knitr
 NeedsCompilation: yes
-Packaged: 2018-05-06 15:50:48.078302 UTC; edd
+Packaged: 2018-11-18 20:48:38.367842 UTC; edd
 Repository: CRAN
-Date/Publication: 2018-05-06 20:28:41 UTC
+Date/Publication: 2018-11-18 21:10:03 UTC
