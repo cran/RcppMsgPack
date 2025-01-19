@@ -1,0 +1,16 @@
+bibentry("Manual",
+         other = unlist(citation(auto = meta), recursive = FALSE))
+
+bibentry("Article",
+         title  = "RcppMsgPack: MessagePack Headers and Interface Functions for R",
+         author = c(person("Travers", "Ching",
+                           comment = c(ORCID = "0000-0002-5577-3516")),
+                    person("Dirk", "Eddelbuettel",
+                           email = "edd@debian.org",
+                           comment = c(ORCID = "0000-0001-6419-907X"))),
+         journal = "The R Journal",
+         year = "2018",
+         volume = "10",
+         number = "2",
+         pages = "516--525",
+         doi = "10.32614/RJ-2018-068")

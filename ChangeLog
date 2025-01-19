@@ -1,3 +1,74 @@
+2025-01-19  Dirk Eddelbuettel  <edd@debian.org>
+
+	* DESCRIPTION (Date, Version): Release 0.2.4
+
+2025-01-16  Travers Ching  <traversc@gmail.com>
+
+	* src/rcppmsgpack_c_functions.cpp: Use Rcpp::RawVector instead of
+	std::vector<unsigned char> saving extra copy
+
+2025-01-16  Dirk Eddelbuettel  <edd@debian.org>
+
+	* R/functions.R: Switch class comparison to inherits
+
+	* .github/workflows/ci.yaml: Simplify to r-ci with included bootstrap
+
+2024-10-19  Dirk Eddelbuettel  <edd@debian.org>
+
+	* DESCRIPTION (Authors@R): Added
+
+2024-08-09  Dirk Eddelbuettel  <edd@debian.org>
+
+	* README.md: Switch several URLs from http to https
+
+2024-05-22  Dirk Eddelbuettel  <edd@debian.org>
+
+	* README.md: Use tinyverse.netlify.app for dependency badge
+
+2024-03-26  Dirk Eddelbuettel  <edd@debian.org>
+
+	* .github/workflows/ci.yaml (jobs): Update to actions/checkout@v4,
+	add r-ci-setup actions
+
+2023-04-10  Dirk Eddelbuettel  <edd@debian.org>
+
+	* DESCRIPTION (Date, Version): Roll micro release
+
+	* src/Makevars: No longer set a compilation standard
+
+2023-02-12  Dirk Eddelbuettel  <edd@debian.org>
+
+	* inst/CITATION: Convert to bibentry() style with person(), use doi
+
+2022-11-15  Dirk Eddelbuettel  <edd@debian.org>
+
+	* .github/workflows/ci.yaml (jobs): Update to actions/checkout@v3
+
+2021-12-18  Dirk Eddelbuettel  <edd@debian.org>
+
+	* README.md: Remove unused continuous integration artifact and badge
+
+2021-05-20  Dirk Eddelbuettel  <edd@debian.org>
+
+	* DESCRIPTION (URL): Add repo and project page
+
+2021-01-10  Dirk Eddelbuettel  <edd@debian.org>
+
+        * .github/workflows/ci.yaml: Add CI runner using r-ci
+	* README.md: Add new badge
+
+2020-05-09  Dirk Eddelbuettel  <edd@debian.org>
+
+	* README.md: Added 'Last Commit' and 'RJournal' badges
+
+2019-05-21  Dirk Eddelbuettel  <edd@debian.org>
+
+	* DESCRIPTION (Date, Version): Roll minor release
+
+	* inst/CITATION: Added citation information
+
+	* README.md: Mention R Journal paper
+
 2018-11-18  Dirk Eddelbuettel  <edd@debian.org>
 
 	* DESCRIPTION (Date, Version): Release 0.2.3
